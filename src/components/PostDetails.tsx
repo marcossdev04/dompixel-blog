@@ -15,7 +15,7 @@ export function PostDetailsComponent({ data }: Props) {
     year: "numeric",
   });
   return (
-    <div className="max-w-[1200px] py-5 laptop:max-w-[900px] mx-auto">
+    <div className="max-w-[1200px] mobile:px-5 py-5 laptop:max-w-[900px] mx-auto">
       <div className="flex flex-col">
         <div className="w-full h-[50vh]">
           <Image
@@ -26,7 +26,7 @@ export function PostDetailsComponent({ data }: Props) {
           />
         </div>
         <Text
-          className="block mt-3 mb-1.5 text-2xl"
+          className="block mobile:py-2 mt-3 mb-1.5 text-2xl"
           fw={600}
           component="animate"
         >

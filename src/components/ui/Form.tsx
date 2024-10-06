@@ -54,7 +54,7 @@ export function FormComponent() {
   };
 
   return (
-    <div className="max-w-[1200px] py-5 laptop:max-w-[900px] mx-auto">
+    <div className="max-w-[1200px] mobile:px-10 py-5 laptop:max-w-[900px] mx-auto">
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <TextInput
           label="Título"
