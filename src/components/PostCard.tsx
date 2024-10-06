@@ -30,33 +30,34 @@ export function PostCard({ content, title, image, date, id }: Props) {
           />
         </Link>
       </Card.Section>
+      <Link href={`/post-details/${id}`}>
+        <Text className="block mt-3 mb-1.5" fw={500} component="a">
+          {title}
+        </Text>
+      </Link>
+      <Link href={`/post-details/${id}`}>
+        <Text fz="sm" c="dimmed" lineClamp={4}>
+          {content}
+        </Text>
+      </Link>
+      <Link href={`/post-details/${id}`}>
+        <Group justify="space-between" className="mt-3">
+          <Center>
+            <Text fz="sm" inline>
+              {formattedDate}
+            </Text>
+          </Center>
 
-      <Text className="block mt-3 mb-1.5" fw={500} component="a">
-        {title}
-      </Text>
-
-      <Text fz="sm" c="dimmed" lineClamp={4}>
-        {content}
-      </Text>
-
-      <Group justify="space-between" className="mt-3">
-        <Center>
-          <Text fz="sm" inline>
-            {formattedDate}
-          </Text>
-        </Center>
-
-        <Group gap={8} mr={0}>
-          <ActionIcon className="dark:bg-neutral-700 dark:hover:bg-neutral-800 bg-neutral-100 hover:bg-neutral-200">
-            <Heart size={16} className="text-red-800" />
-          </ActionIcon>
-          <ActionIcon className="dark:bg-neutral-700  dark:hover:bg-neutral-800 bg-neutral-100 hover:bg-neutral-200">
-            <Share size={16} className="text-blue-400" />
-          </ActionIcon>
+          <Group gap={8} mr={0}>
+            <ActionIcon className="dark:bg-neutral-700 dark:hover:bg-neutral-800 bg-neutral-100 hover:bg-neutral-200">
+              <Heart size={16} className="text-red-800" />
+            </ActionIcon>
+            <ActionIcon className="dark:bg-neutral-700  dark:hover:bg-neutral-800 bg-neutral-100 hover:bg-neutral-200">
+              <Share size={16} className="text-blue-400" />
+            </ActionIcon>
+          </Group>
         </Group>
-
-        {/* Exibindo a data formatada */}
-      </Group>
+      </Link>
     </Card>
   );
 }
